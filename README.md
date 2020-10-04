@@ -8,7 +8,7 @@ COVID/Economy/Unemployment Impact on NYC Housing Prices
 * Since the data is available in span of last 10 years, it will allow us to generate comparative analysis from pre COVID to COVID changes in housing rental market in NYC.
 ### Description - source of data
 * We are planning to use three sources of data.
-  * Unemployment Data
+  * Unemployment Data - https://www.bls.gov/lau/#tables
   * Income Data from IRS - https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2018-zip-code-data-soi
   * Housing data - from Street Easy
 * Database
