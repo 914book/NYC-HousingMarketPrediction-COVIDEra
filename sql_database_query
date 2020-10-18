@@ -1,0 +1,99 @@
+
+#table employed
+CREATE TABLE employed (
+     boro CHAR(50) NOT NULL,
+	 employed INT NOT NULL,
+     unemployed INT NOT NULL,
+	 PRIMARY KEY (boro)
+);
+
+#table income
+
+CREATE TABLE income (
+     boro CHAR (50) NOT NULL,
+	 income_over_100k INT NOT NULL,
+     income_under_100k INT NOT NULL,
+	 PRIMARY KEY (boro)
+);
+
+#Table zipcodes
+
+CREATE TABLE zipcodes (
+     zip INT NOT NULL,
+	 city char(50) NOT NULL,
+     County char(50) NOT NULL,
+	 type char(50) NOT NULL,
+	 boro char(50) NOT NULL
+);
+
+#table house
+
+CREATE TABLE house(
+     address VARCHAR,
+	 zipcode INT,
+	 date DATE,
+	 beds VARCHAR,
+	 bath decimal,
+	 sq_ft INT,
+	house_price int
+);
+
+# table house + zipcodes
+
+CREATE TABLE houseallzip(
+     address VARCHAR,
+	 zipcode INT,
+	 date DATE,
+	 beds VARCHAR,
+	 bath decimal,
+	 sq_ft INT,
+	 house_price int,
+	 zip INT NOT NULL,
+	 city char(50) NOT NULL,
+     County char(50) NOT NULL,
+	 type char(50) NOT NULL,
+	 boro char(50) NOT NULL
+);
+
+# adding data from housing and zipcodes to new table
+
+INSERT INTO houseallzip (
+SELECT *
+FROM house
+JOIN zipcodes
+  ON house.zipcode = zipcodes.zip
+);
+
+# check housedata + zip
+select* 
+from houseallzip
+ 
+ # create new ‘all’ output table
+ 
+CREATE TABLE fulloutpuhousing(
+     address VARCHAR,
+	 zipcode INT,
+	 date DATE,
+	 beds VARCHAR,
+	 bath decimal,
+	 sq_ft INT,
+	 house_price int,
+	 city char(50) NOT NULL,
+     County char(50) NOT NULL,
+	 county_type char(50) NOT NULL,
+	 boro char(50) NOT NULL,
+	 income_over_100k INT NOT NULL,
+     income_under_100k INT NOT NULL,
+	 employed INT NOT NULL,
+     unemployed INT NOT NULL
+);
+
+#insert into ‘all’ data
+ 
+INSERT INTO fulloutpuhousing ( 
+select houseallzip.address, houseallzip.zipcode, houseallzip.Date, houseallzip.beds, houseallzip.bath, houseallzip.sq_ft, houseallzip.house_price, houseallzip.city, houseallzip.city, houseallzip.County, houseallzip.boro, income.income_over_100k, income.income_under_100k, employed.employed, employed.unemployed 
+from houseallzip
+JOIN income 
+  ON houseallzip.boro = income.boro
+JOIN employed
+  ON employed.boro = houseallzip.boro);
