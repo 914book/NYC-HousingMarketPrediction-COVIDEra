@@ -31,6 +31,10 @@ COVID/Economy/Unemployment Impact on NYC Housing Prices
         * zipcode
         * Year
         * Avg Income (or could be median?)
+
+#google slides link
+https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0ovW75JQ/edit?usp=sharing
+
       
 ### Questions we hope to answer
 
