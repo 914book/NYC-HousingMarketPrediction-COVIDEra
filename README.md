@@ -1,36 +1,47 @@
 # FinalProjectGroupD
 Final Team Project
+
 ## TOPIC
-COVID/Economy/Unemployment Impact on NYC Housing Prices
+Predict housing prices in New York City with additional features around broad economic factors.  
+
 ### Reason 
-* COVID and Housing Data is widely available for analysis
-* Found housing rental data on Street Easy by neighborhoods, borough for last 10 years.
-* Since the data is available in span of last 10 years, it will allow us to generate comparative analysis from pre COVID to COVID changes in housing rental market in NYC.
+* We are looking to predict housing prices in NYC.  As we currently are living through a global pandemic that is dramatically effecting the housing markets in and around the city.  We wanted to see if we could draw any correlation between COVID and these prices.  As we did our EDA we discovered that there is a bit of 'lag time' and 'volativity' between COVID cases directly and hosing prices.  Therefore, we chose our additional features (income & unemployment) over COVID cases direclty to remove what we saw as having a negative impact our our predictions.  We still feel that as additional data becomes available these additional features will continue to enhance the accruace of the model where as other housing models may not be able to adapt to these dramatic changes in the NYC housing market.
+
 ### Description - source of data
 * We are planning to use three sources of data.
   * Unemployment Data - https://www.bls.gov/lau/#tables
   * Income Data from IRS - https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2018-zip-code-data-soi
-  * Housing data - from Street Easy
+  * scraping housing data from online sources: price, sold date, sq ft, bedrooms, bathrooms, zipcode
+
 * Database
   * pgAdmin
     * Table 1 - Housing Table
-      * Housing feature1
-      * Housing feature2
-      * Housing feature3
+      * address
       * zipcode
-      * year
-      * Housing Price
-      NOTE: Housing features - #of bedrooms, sq ft etc.
+      * Date Sold
+      * number of bedrooms
+      * number of Bathrooms
+      * sq feet
+      * Price
+    
+    * Table 2 - zipcode to boro (transaltion table)
+        * zipcode
+        * city
+        * county
+        * type
+        * boro
      
-     * Table 2 - Unemployment
-        * zipcode
-        * Year
-        * number of people unemployed
-      
      * Table 3 - Income
-        * zipcode
-        * Year
-        * Avg Income (or could be median?)
+        * boro
+        * number of people with income over 100k
+        * number of people with income under 100k
+      
+     * Table 4 - Unemployed
+        * boro
+        * number of people employed
+        * number of people unemployed
+
+
 
 #google slides link
 https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0ovW75JQ/edit?usp=sharing
