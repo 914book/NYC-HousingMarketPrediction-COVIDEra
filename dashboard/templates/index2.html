@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Final Project Group D
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Final Project Group D<small> by Toral Shah, Maria Wolf and Sam Wunderlich</small> </a>
+        </nav>
+	</div>
+  
+  <div class="jumbotron">
+        <h1 class="display-4">NYC HOUSING PRICES</h1>
+  </div>
+
+  <div class="container-fluid">
+    <h2>
+      How unemployment and other factors affect housing prices in NYC? 
+
+    </h2>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <h2>Hypothesis</h2>
+      </div>
+      <div class="outer">
+        <p>
+          How unemployment alter the housing prices in NYC. 
+          Our working hypothesis is that with the rising unemployment rate housing prices would go down and vice versa. Our analysis will show how unemployment affects prices in different zip codes and boroughs and if income has any impact on housing prices.
+          We will also discuss other factors affecting the housing price, which one has the biggest impact and how they affect the price.          
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <pre>
+  Data sources: www.irs.gov
+                www.bls.gov
+                www.labor.ny.gov
+                www.zillow.com
+      </pre>
+  </div>
+  
+  
+  
+  <div class="login">
+    <h1>Housing Prices Forecasting</h1>
+    <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+        <input type="text" name="unemployed" placeholder="unemployed" required="required" />
+        <input type="text" name="employed" placeholder="employed" required="required" />
+        <input type="text" name="zip" placeholder="ZIP code" required="required" />
+        <input type="text" name="sqft" placeholder="square feet" required="required" />
+        <input type="text" name="price" placeholder="price" required="required" />
+        <input type="text" name="bds" placeholder="number of bedrooms" required="required" />
+        <input type="text" name="bath" placeholder="number of bathrooms" required="required" />
+        <input type="text" name="incomeabove100k" placeholder="number of people with income above 100k" required="required" />
+        <input type="text" name="incomebelow100k" placeholder="number of people with income below  100k" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict housing price</button>
+      </form>
+      
+    <br>
+    <br>
+    {{ prediction_text }}
+      
+  </div>
+</body>
+</html>
