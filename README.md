@@ -90,12 +90,14 @@ https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0
                           * Final transformed df - refer to :  transformed_scaled_data which is used to train and test dataset for ML models.
 
 * Description of how data was split into training and test sets
-  * write here
-    * Subtopic
+  * transformed_scaled_data from original house2data file - is ready for ML model.
+    * Our prediction is housing prices based on income, unemployment and other categories such as # of baths, sq ft, # of beds.
+    * Therefore - prediction (dependent variable): y = price.value and x (independent variables) = all other categories but price
+    * data is split into X_train, X_test, y_train and y_test
     
  * Explanation of model choice, including limitations and benefits
-  * write here
-    * Subtopic
+   * We used Linear Regression Model and Random Forest Classifier Model
+   * We are trying to predict price which is a continuous variable meaning housing price can be any numerical value within a range. Therefore, we have decided to use regression      model instead of classification model where the target variable has only two possible values.
     
  * Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
   * write here
