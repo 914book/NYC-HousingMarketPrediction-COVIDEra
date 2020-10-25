@@ -99,22 +99,20 @@ https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0
    * We used Linear Regression Model and Random Forest Classifier Model
    * We are trying to predict price which is a continuous variable meaning housing price can be any numerical value within a range. Therefore, we have decided to use regression      model instead of classification model where the target variable has only two possible values.
     
- * Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
-  * write here
-    * Subtopic
+ * Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables), 
+      * We decided to run Linear Regression - because Rain Forest ML required huge memory resources while Linear Regression does not require very complicated calculations, and           runs fast.
     
  * Description of how they have trained the model thus far, and any additional trining that will take place
-  * write here
-    * Subtopic
+      * We started training our model with sample database and then we added more data.
  
  * Description of current accuracy score
-  * write here
-    * Subtopic
+      * Mean Squared error from Rain Forest ML - 0.743
+      * Mean Squared error from Linear Regression ML - 0.739
+      * Both model showed similar numbers - so we decided to use Linear Regression ML.
+
 
 ### Description - Interactive App : FLASK 
-* write here
-    * Subtopic
-
+      *
       
 ### Questions we hope to answer
 
