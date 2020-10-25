@@ -46,6 +46,37 @@ Predict housing prices in New York City with additional features around broad ec
 #google slides link
 https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0ovW75JQ/edit?usp=sharing
 
+### Description - Machine Learning Model
+
+* Description of data preprocessing
+  * write here
+    * Subtopic
+
+* Description of feature engineering and feature selection, including decision-making process
+  * write here
+    * Subtopic
+
+* Description of how data was split into training and test sets
+  * write here
+    * Subtopic
+    
+ * Explanation of model choice, including limitations and benefits
+  * write here
+    * Subtopic
+    
+ * Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
+  * write here
+    * Subtopic
+    
+ * Description of how they have trained the model thus far, and any additional trining that will take place
+  * write here
+    * Subtopic
+ 
+ * Description of current accuracy score
+  * write here
+    * Subtopic
+
+
       
 ### Questions we hope to answer
 
