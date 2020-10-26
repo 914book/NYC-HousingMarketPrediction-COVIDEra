@@ -112,10 +112,9 @@ https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0
 
 
 ### Description - Interactive App : FLASK 
-      *
+      * see 'dashboard' folder in github
       
 ### Questions we hope to answer
 
-* How does unemployement affected housing prices?
-* How does income impacts housing prices?
-* On the side - we are also planning to have seperate impact analysis due to COVID if time permits. - # of COVID CASES by the Zipcode and housing prices.
+* housing prices by zipcode and a few housing options.
+* use additional feautres to enhance the results.  Do these additional features enchance the models results as we move into a new  'market' while the city changes to adapt to COVID?
