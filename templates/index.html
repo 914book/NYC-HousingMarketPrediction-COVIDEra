@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Final Project Group D
+    </title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Final Project Group D<small> by Toral Shah, Maria Wolf and Sam Wunderlich</small> </a>
+        </nav>
+	</div>
+  
+  <div class="jumbotron">
+        <h1 class="display-4">NYC HOUSING PRICES</h1>
+  </div>
+
+  <div class="container-fluid">
+    <h2>
+      How unemployment and other factors affect housing prices in NYC
+
+    </h2>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Hypothesis</h2>
+      </div>
+      <div class="col-md-8">
+        <p>
+          How unemployment alter the housing prices in NYC. 
+          Our working hypothesis is that with the rising unemployment rate housing prices would go down and vice versa. Our analysis will show how unemployment affects prices in different zip codes and boroughs and if income has any impact on housing prices.
+          We will also discuss other factors affecting the housing price, which one has the biggest impact and how they affect the price.          
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Model</h2>
+      </div>
+      <div class="col-md-8">
+        <p>
+          Random forest and Linear regression Model          
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Data sources:</h2>
+      </div>
+      <div class="col-md-8">
+        <ul class="b">
+          <li>Income Data - www.irs.gov </li>
+          <li>Unemployment Data - www.bls.gov</li>
+          <li>scraping housing data from online sources www.zillow.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h4> $/sq feet for 1,2 and 3 bedroom apartments</h4>
+  <img src="static/images/incomemap.png" alt="" style="width:600px;height:450px;">
+  
+  <div class="login">
+    <h1>Housing Prices Forecasting</h1>
+    <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+        <select id="Borough" name="Borough" >
+          <option value="New York County">Manhattan</option>
+          <option value="Kings County">Brooklyn</option>
+          <option value="Queens County">Queens</option>
+          <option value="Bronx County">Bronx</option>
+          <option value="Richmond County">Staten Island</option> 
+        </select>
+        <input type="text" name="zip" placeholder="ZIP code (only NYC ZIP codes)" required="required" />
+        <input type="text" name="bds" placeholder="number of bedrooms (e.g. Studio, 1 ,2 ,3 ,...)" required="required" />
+        <input type="text" name="bath" placeholder="number of bathrooms (e.g. 1, 1.5, 2,...)" required="required" />
+        <input type="text" name="sqft" placeholder="square feet" required="required" />
+        <input type="text" name="unemployement rate" placeholder="unemployement rate" required="required" />
+        <input type="text" name="income rate" placeholder="income rate" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict housing price</button>
+      </form>
+    
+    <br>
+    <br>
+    {{ prediction_text }}
+      
+  </div>
+</body>
+</html>
