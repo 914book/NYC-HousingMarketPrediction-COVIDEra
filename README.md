@@ -44,7 +44,7 @@ Predict housing prices in New York City with additional features around broad ec
 
 
 #google slides link
-https://docs.google.com/presentation/u/1/d/1hO2fdHAkZdISUFA_js0r_3JiT6kwvqU1uQD0ovW75JQ/edit?usp=sharing
+https://docs.google.com/presentation/d/1n89SRbyVxmuKiiazBlswaCqlmpPzC2FCLiZhE3vLW3k/edit#slide=id.p2
 
 ### Description - Machine Learning Model
 
