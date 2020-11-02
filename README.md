@@ -136,9 +136,9 @@ https://docs.google.com/presentation/d/1n89SRbyVxmuKiiazBlswaCqlmpPzC2FCLiZhE3vL
     
     6. y- predicted value scaled back to get results in $
     
-    ![screenshot](dash1.png)
-    ![screenshot](dash2.png)
-    ![screenshot](dash3.png)
+![screenshot](dash1.png)
+![screenshot](dash2.png)
+![screenshot](dash3.png)
       
 ### Questions we hope to answer
 
