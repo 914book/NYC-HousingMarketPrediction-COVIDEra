@@ -112,7 +112,33 @@ https://docs.google.com/presentation/d/1n89SRbyVxmuKiiazBlswaCqlmpPzC2FCLiZhE3vL
 
 
 ### Description - Interactive App : FLASK 
-      * see 'dashboard' folder in github
+    * to put our machine learning model into production we used Flask
+    * front end created using HTML and CSS 
+    * PICKLE Module used to store the model
+    
+    The Pickle module implements binary protocols for serializing and deserializing a Python object structure.
+    
+    Steps taken:
+    1. in Jupyter notebook we created 5 Pickle files: 
+    * encoder.pkl - pickle file for encoding cathegorical column Borough
+    * encoderz.pkl - pickle file for encoding cathegorical column ZIP
+    * scaler.pkl - pickle file for scaling numerical columns
+    * scaler2.pkl - pickle file for scaling numerical column price
+    * rfmodel.pkl - pickle file for random forest model
+    
+    2. pickle files loaded in Flask
+    
+    3. input values from our app were loaded in Flask
+    
+    4. scalers and encoders applied 
+    
+    5. input data ran trough our model
+    
+    6. y- predicted value scaled back to get results in $
+    
+    ![screenshot](dash1.png)
+    ![screenshot](dash2.png)
+    ![screenshot](dash3.png)
       
 ### Questions we hope to answer
 
